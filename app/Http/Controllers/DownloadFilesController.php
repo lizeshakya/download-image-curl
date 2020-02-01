@@ -12,7 +12,6 @@ class DownloadFilesController extends Controller
     {
 
         Excel::import(new UsersExport(),request()->file('file'));
-        dd('end');
         return redirect()->route('')->with('success', 'Created successfully');
 
 
